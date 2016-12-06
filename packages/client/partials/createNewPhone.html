@@ -1,0 +1,75 @@
+<h3>Enter Phone Details</h3>
+
+<p ng-if='resposeMessage'>Message from Server is : {{resposeMessage}}</p>
+
+<div layout='row' layout-align='space-around center'>
+	<div>
+		<md-input-container>
+			<label>Phone Name</label>
+			<input ng-model="phone.name" required>
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>Manufacture Name</label>
+			<input ng-model="phone.manufactureName">
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>Price</label>
+			<input ng-model="phone.price">
+		</md-input-container>	
+	</div>
+</div>
+
+
+<div layout='row' layout-align='space-around center'>
+	<div>
+		<md-input-container>
+			<label>Battery</label>
+			<input ng-model="phone.battery" >
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>Camera</label>
+			<input ng-model="phone.camera" >
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>RAM</label>.
+			<input ng-model="phone.ram">
+		</md-input-container>
+	</div>
+</div>
+
+
+<div layout='row' layout-align='space-around center'>
+	<div>
+		<md-input-container>
+			<label>OS</label>.
+			<input ng-model="phone.os">
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>CPU</label>.
+			<input ng-model="phone.cpu">
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>Screen Size</label>.
+			<input ng-model="phone.screenSize">
+		</md-input-container>
+	</div>
+</div>
+
+
+<div layout='row' layout-align='space-around center'>	
+	<div>
+		<md-button md-no-ink class="md-primary" ng-click='savePhone(phone);'>Save</md-button>
+	</div>
+</div>

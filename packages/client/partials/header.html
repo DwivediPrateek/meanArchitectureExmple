@@ -1,0 +1,25 @@
+<md-toolbar layout="column" class="md-padding">
+    <div class="md-toolbar-tools">      
+      <div flex='30' ui-sref='home'>Phone Library</div>
+      <div flex='50'>
+        <md-autocomplete flex       
+        md-selected-item="selectedPhone"        
+        md-search-text="searchPhoneName"
+        md-selected-item-change="onPhoneSelected(selectedPhone)"
+        md-items="item in querySearchedPhone(searchPhoneName)"
+        md-item-text="item.phoneName"
+        md-min-length="2"
+        md-floating-label="Which phone you are looking for !!">
+        <md-item-template>
+          <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.phoneName}}</span>
+        </md-item-template>
+        <md-not-found>
+          No states matching "{{searchPhoneName}}" were found.
+        </md-not-found>
+      </md-autocomplete>
+    </div>
+    <div flex>
+    <md-button ui-sref="createNewPhone" class='md-primar'>Create New Phone</md-button>
+    </div>
+  </div>    
+</md-toolbar>

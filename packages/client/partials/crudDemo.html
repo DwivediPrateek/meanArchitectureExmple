@@ -1,0 +1,85 @@
+<h3>Enter User Details</h3>
+
+<p ng-if='resposeMessage'>Message from Server is : {{resposeMessage}}</p>
+
+<div layout='row' layout-align='space-around center'>
+	<div>
+		<md-input-container>
+			<label>First Name</label>
+			<input ng-model="user.firstName" required>
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>Middle Name</label>
+			<input ng-model="user.middleName">
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>Last Name</label>
+			<input ng-model="user.lastName">
+		</md-input-container>	
+	</div>
+</div>
+
+
+<div layout='row' layout-align='space-around center'>
+	<div>
+		<md-datepicker ng-model="user.dateOfBirth" md-placeholder="Date of Birth"></md-datepicker>
+	</div>
+	<div>
+		<md-input-container>
+			<label>Enter Email</label>
+			<input ng-model="user.email" type="email">
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>Flat Number</label>.
+			<input ng-model="user.address.present.flatNumber">
+		</md-input-container>
+	</div>
+</div>
+
+
+<div layout='row' layout-align='space-around center'>
+	<div>
+		<md-input-container>
+			<label>City</label>.
+			<input ng-model="user.address.present.city">
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>Society Name</label>.
+			<input ng-model="user.address.present.societyName">
+		</md-input-container>
+	</div>
+	<div>
+		<md-input-container>
+			<label>Zip Code</label>.
+			<input ng-model="user.address.present.zipCode">
+		</md-input-container>
+	</div>
+</div>
+
+
+<div layout='row' layout-align='space-around center'>
+	<div>
+		<md-input-container>
+			<label>State</label>.
+			<input ng-model="user.address.present.state">
+		</md-input-container>
+
+	</div>
+	<div>
+		<md-input-container>
+			<label>Country</label>.
+			<input ng-model="user.address.present.country">
+		</md-input-container>
+	</div>
+	<div>
+		<md-button md-no-ink class="md-primary" ng-click='saveUser(user);'>Save</md-button>
+	</div>
+</div>
